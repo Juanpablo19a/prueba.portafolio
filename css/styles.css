@@ -375,73 +375,100 @@ body.dark-mode .home-content {
 }
 
 /** portafolio**/
+/* Portafolio Section */
 .portafolio {
   background-color: var(--second-color);
 }
 
 .portafolio-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
   margin-top: 4rem;
+  padding: 0 2rem;
 }
 
 .portafolio-item {
-  width: calc(90% / 3);
   background-color: var(--bg-color);
-  border-radius: 1rem;
-  border: 0.1rem solid transparent;
-  padding: 2rem;
-  box-shadow: 0 0 0.5rem var(--main-color);
-  transition: all 0.5s ease;
+  border-radius: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
 .portafolio-item:hover {
-  outline: 1rem solid var(--main-color);
-  cursor: pointer;
-  transform: translateY(0.5rem) scale(1.02);
+  transform: translateY(-1rem);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+  border-color: var(--main-color);
 }
 
 .portafolio-item img {
-  display: inline-block;
-  height: auto;
   width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  height: 220px;
+  object-fit: cover;
+  order: -1;
+  border-radius: 0;
+  transition: transform 0.5s ease;
+}
+
+.portafolio-item:hover img {
+  transform: scale(1.05);
 }
 
 .portafolio-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  padding: 2rem 2rem 1rem;
 }
 
 .portafolio-header h4 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.4rem;
-}
-
-.portafolio-header a {
-  display: inline-flex;
-  font-size: 3.5rem;
-  border-radius: 50%;
-  padding: 0.5rem;
   color: var(--text-color);
-  background-color: var(--main-color);
-  transition: 0.3s ease;
 }
 
-.portafolio-header a:hover {
-  color: var(--main-color);
-  background-color: var(--text-color);
+.portafolio-header a, .project-links a {
+  display: inline-flex;
+  font-size: 2.2rem;
+  color: var(--text-color);
+  transition: 0.3s ease;
+  margin-left: 0.5rem;
 }
+
+.portafolio-header a:hover, .project-links a:hover {
+  color: var(--main-color);
+  transform: scale(1.2);
+}
+
+/* Remove old circle background styles for icons if desired, or keep them minimal */
 
 .portafolio-item p {
-  margin-bottom: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--other-color);
+  line-height: 1.6;
+}
+
+.portafolio-item p:nth-of-type(2) {
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  border-top: 1px solid var(--second-color);
+  padding-top: 1.5rem;
+  margin-top: auto; /* Push to bottom if content is short */
+}
+
+/* Ensure links container (if used in future/JS) behaves */
+.project-links {
+    display: flex;
+    align-items: center;
 }
 
 /** Contact Form **/
