@@ -659,67 +659,6 @@ section {
   color: #34d399;
 }
 
-.floating-badge {
-  position: absolute;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 1.6rem;
-  border-radius: 1.4rem;
-  background: var(--surface-elevated);
-  border: 1px solid var(--border-strong);
-  box-shadow: var(--card-shadow);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--text-color);
-  animation: floatSlow 5s ease-in-out infinite;
-}
-
-.floating-badge span {
-  color: var(--text-color);
-}
-
-.floating-badge i {
-  font-size: 2.2rem;
-}
-
-.badge-react {
-  top: -2rem;
-  right: -1.5rem;
-}
-.badge-react i {
-  color: #00d8ff;
-}
-
-.badge-angular {
-  bottom: 4.5rem;
-  left: -2.5rem;
-  animation-delay: 1.5s;
-}
-.badge-angular i {
-  color: #dd0031;
-}
-
-.badge-node {
-  bottom: -2rem;
-  right: 2.5rem;
-  animation-delay: 3s;
-}
-.badge-node i {
-  color: #68a063;
-}
-
-@keyframes floatSlow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 /* ==========================================================================
    ABOUT & SKILLS SECTION (BENTO GRID)
    ========================================================================== */
@@ -1855,10 +1794,6 @@ section {
     font-size: 1.65rem;
     padding: 1.2rem 1.8rem;
     border-radius: 1.2rem;
-  }
-
-  .floating-badge {
-    display: none;
   }
 
   .input-group {
