@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juan Pablo</title>
+    <meta
+      name="description"
+      content="Portafolio de Juan Pablo — Desarrollador Web Frontend especializado en React, Angular, JavaScript, TypeScript y Node.js."
+    />
+    <title>Juan Pablo | Desarrollador Web Frontend</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,460 +21,1099 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
-    <header class="header">
-      <a href="index.html" class="logo">Juan Pablo</a>
-      <nav class="navbar">
-        <a href="#home" class="active">Inicio</a>
-        <a href="#about">acerca de</a>
-        <a href="#services">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#contact">Contacto</a>
+  <body class="dark-mode">
+    <!-- Efectos de fondo ambiental -->
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>Juan<span>Pablo</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-link active">Inicio</a>
+        <a href="#about" class="nav-link">Acerca de</a>
+        <a href="#services" class="nav-link">Servicios</a>
+        <a href="#portafolio" class="nav-link">Portafolio</a>
+        <a href="#contact" class="nav-link">Contacto</a>
       </nav>
-      <div class="header-icons">
-        <i class="bx bx-moon" id="darkMode-icon"></i>
-        <i class="bx bx-menu" id="menu-icon"></i>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="darkMode-icon"
+          aria-label="Cambiar tema de color"
+          title="Cambiar tema"
+        >
+          <i class="bx bx-sun"></i>
+        </button>
+        <a href="#contact" class="btn-header-cta">Hablemos</a>
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-icon"
+          aria-label="Abrir menú de navegación"
+        >
+          <i class="bx bx-menu"></i>
+        </button>
       </div>
     </header>
 
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Hola , soy <span>Juan Pablo</span></h1>
-        <h3>Desarrollador Web</h3>
-        <p>
-          Hola, soy Juan Pablo, estudiante de Desarrollo Web en el Instituto
-          SISE (5to ciclo). En esta página comparto mis proyectos y habilidades
-          con tecnologías como HTML, CSS, JavaScript, React, Angular y Node.js.
-          ¡Gracias por visitar!
-        </p>
-        <div class="social-media">
-          <a
-            href="https://www.facebook.com/juan.pablo.acosta.205303/"
-            target="_blank"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a href="https://github.com/Juanpablo19a" target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
+    <main>
+      <!-- Hero / Home Section -->
+      <section class="home" id="home">
+        <div class="home-container">
+          <div class="home-content reveal">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span>Disponible para prácticas y proyectos</span>
+            </div>
 
-          <a href="https://www.linkedin.com/in/juanpabloac19/" target="_blank"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
+            <p class="home-greeting">Hola, soy</p>
+            <h1 class="home-title">Juan Pablo</h1>
+            <h2 class="home-role">
+              <span id="typed-role">Desarrollador Web Frontend</span>
+              <span class="cursor-blink">|</span>
+            </h2>
+
+            <p class="home-description">
+              Estudiante de <strong>Desarrollo Web en el Instituto SISE (5to ciclo)</strong>.
+              Transformo ideas en aplicaciones web modernas, rápidas e intuitivas
+              utilizando <span>React</span>, <span>Angular</span>, <span>TypeScript</span> y
+              <span>Node.js</span>.
+            </p>
+
+            <div class="home-cta-group">
+              <a
+                href="resource/cv-juan-pablo (2).pdf"
+                class="btn btn-primary"
+                download
+              >
+                <i class="bx bx-download"></i>
+                <span>Descargar CV</span>
+              </a>
+              <a
+                href="https://wa.me/+51970630215"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+              >
+                <i class="bx bxl-whatsapp"></i>
+                <span>Contáctame</span>
+              </a>
+              <a href="#portafolio" class="btn btn-outline">
+                <span>Ver Proyectos</span>
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+
+            <div class="home-footer-bar">
+              <div class="social-media">
+                <a
+                  href="https://github.com/Juanpablo19a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  title="GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/juanpabloac19/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/juan.pablo.acosta.205303/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  title="Facebook"
+                >
+                  <i class="bx bxl-facebook"></i>
+                </a>
+              </div>
+
+              <div class="home-stats">
+                <div class="stat-item">
+                  <strong>6+</strong>
+                  <span>Proyectos Web</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <strong>12+</strong>
+                  <span>Tecnologías</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <strong>5to</strong>
+                  <span>Ciclo SISE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual interactivo de Desarrollador -->
+          <div class="home-visual reveal">
+            <div class="code-card">
+              <div class="code-card-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">developer.config.ts</span>
+                <span class="window-badge">TS</span>
+              </div>
+              <div class="code-card-body">
+                <pre><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">nombre</span>: <span class="c-str">"Juan Pablo"</span>,
+  <span class="c-prop">rol</span>: <span class="c-str">"Frontend Developer"</span>,
+  <span class="c-prop">formacion</span>: <span class="c-str">"Instituto SISE (5to ciclo)"</span>,
+  <span class="c-prop">ubicacion</span>: <span class="c-str">"Lima, Perú"</span>,
+  <span class="c-prop">stack</span>: [
+    <span class="c-str">"React"</span>, <span class="c-str">"Angular"</span>, <span class="c-str">"TypeScript"</span>,
+    <span class="c-str">"JavaScript"</span>, <span class="c-str">"Node.js"</span>, <span class="c-str">"MySQL"</span>
+  ],
+  <span class="c-prop">enfoque</span>: <span class="c-str">"UI/UX limpio &amp; alto rendimiento"</span>,
+  <span class="c-prop">disponible</span>: <span class="c-bool">true</span>
+};</code></pre>
+              </div>
+              <div class="code-card-footer">
+                <div class="code-status">
+                  <i class="bx bx-check-circle"></i>
+                  <span>Compilación exitosa • Listo para producción</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Badges flotantes -->
+            <div class="floating-badge badge-react">
+              <i class="bx bxl-react"></i>
+              <span>React &amp; Vite</span>
+            </div>
+            <div class="floating-badge badge-angular">
+              <i class="bx bxl-angular"></i>
+              <span>Angular</span>
+            </div>
+            <div class="floating-badge badge-node">
+              <i class="bx bxl-nodejs"></i>
+              <span>Node.js &amp; SQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About & Skills Section -->
+      <section class="about" id="about">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Conóceme más</span>
+          <h2 class="heading">Acerca de <span>Mí</span></h2>
         </div>
 
-        <a href="resource/cv-juan-pablo (2).pdf" class="btn" download
-          >Descargar CV</a
-        >
-        <a href="https://wa.me/+51970630215" target="_blank" class="btn-ws">
-          <i class="bx bxl-whatsapp"></i>
-          <p>Contactame</p>
-        </a>
-      </div>
-    </section>
+        <div class="about-grid">
+          <!-- Columna de perfil e historia -->
+          <div class="about-card about-bio reveal">
+            <div class="about-bio-header">
+              <div class="avatar-wrapper">
+                <img
+                  src="images/LogoMakr-3mbfiv.png"
+                  alt="Avatar de Juan Pablo"
+                />
+                <span class="avatar-ring"></span>
+              </div>
+              <div>
+                <span class="bio-tag">Frontend Developer</span>
+                <h3>Pasión por el diseño y la tecnología</h3>
+              </div>
+            </div>
 
-    <section class="about" id="about">
-      <div class="about-content">
-        <div class="about-me">
-          <h2 class="heading">Acerca de <span>Mi</span></h2>
-          <h3>Yo soy un <span>Frontend Developer</span></h3>
-          <p>
-            Con una pasión innata por el diseño y la tecnología, me especializo
-            en crear experiencias web intuitivas y atractivas. A lo largo de mi
-            carrera, he desarrollado habilidades sólidas en HTML, CSS y
-            JavaScript, así como en frameworks modernos como React y Angular. Mi
-            objetivo es siempre mejorar la usabilidad y accesibilidad de las
-            aplicaciones web, garantizando que cada proyecto no solo sea
-            visualmente impactante, sino también funcional y fácil de usar. Me
-            encanta colaborar con equipos creativos y enfrentar desafíos que me
-            permitan crecer profesionalmente y aprender nuevas tecnologías.
-          </p>
-          <div class="skills">
-            <h3>Habilidades</h3>
+            <p>
+              Con una pasión innata por el diseño de interfaces y el desarrollo de
+              software, me especializo en crear experiencias web intuitivas,
+              modernas y atractivas. A lo largo de mi formación, he desarrollado
+              habilidades sólidas en <strong>HTML5, CSS3, JavaScript y TypeScript</strong>,
+              así como en frameworks modernos como <strong>React y Angular</strong>.
+            </p>
+            <p>
+              Mi objetivo es mejorar continuamente la usabilidad, el rendimiento y
+              la accesibilidad de las aplicaciones web, garantizando que cada
+              proyecto no solo sea visualmente impactante, sino también escalable y
+              fácil de mantener. Me encanta colaborar en equipo y enfrentar nuevos
+              desafíos tecnológicos.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <i class="bx bxs-graduation"></i>
+                <div>
+                  <h4>Educación</h4>
+                  <p>Desarrollo Web — Instituto SISE (5to Ciclo)</p>
+                </div>
+              </div>
+              <div class="highlight-box">
+                <i class="bx bx-map-pin"></i>
+                <div>
+                  <h4>Ubicación</h4>
+                  <p>Lima, Perú (Remoto / Presencial)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna de Habilidades categorizadas -->
+          <div class="about-card about-skills reveal">
+            <div class="skills-header">
+              <h3>Stack <span>Tecnológico</span></h3>
+              <p>Tecnologías y herramientas con las que construyo proyectos reales.</p>
+            </div>
+
             <div class="content-skills">
-              <div class="item-skill">
-                <span>HTML</span>
+              <div class="item-skill" data-tech="html">
                 <i class="bx bxl-html5"></i>
+                <span>HTML5</span>
               </div>
-              <div class="item-skill">
-                <span>CSS</span>
+              <div class="item-skill" data-tech="css">
                 <i class="bx bxl-css3"></i>
+                <span>CSS3</span>
               </div>
-              <div class="item-skill">
-                <span>JavaScript</span>
+              <div class="item-skill" data-tech="js">
                 <i class="bx bxl-javascript"></i>
+                <span>JavaScript</span>
               </div>
-
-              <div class="item-skill">
-                <span>React</span>
+              <div class="item-skill" data-tech="ts">
+                <i class="bx bxl-typescript"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="item-skill" data-tech="react">
                 <i class="bx bxl-react"></i>
+                <span>React</span>
               </div>
-              <div class="item-skill">
-                <span>Angular</span>
+              <div class="item-skill" data-tech="angular">
                 <i class="bx bxl-angular"></i>
+                <span>Angular</span>
               </div>
-              <div class="item-skill">
-                <span>github</span>
-                <i class="bx bxl-github"></i>
-              </div>
-              <div class="item-skill">
-                <span>Git</span>
-                <i class="bx bxl-git"></i>
-              </div>
-              <div class="item-skill">
-                <span>MongoDb</span>
-                <i class="bx bxl-mongodb"></i>
-              </div>
-              <div class="item-skill">
-                <span>NodeJs</span>
+              <div class="item-skill" data-tech="node">
                 <i class="bx bxl-nodejs"></i>
+                <span>Node.js</span>
               </div>
-              <div class="item-skill">
-                <span>MySql</span>
-                <i class="bx bxl-mysql"></i>
+              <div class="item-skill" data-tech="mongodb">
+                <i class="bx bxl-mongodb"></i>
+                <span>MongoDB</span>
               </div>
-              <div class="item-skill">
-                <span>Netlify</span>
+              <div class="item-skill" data-tech="mysql">
+                <i class="bx bxs-data"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="item-skill" data-tech="git">
+                <i class="bx bxl-git"></i>
+                <span>Git</span>
+              </div>
+              <div class="item-skill" data-tech="github">
+                <i class="bx bxl-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="item-skill" data-tech="netlify">
                 <i class="bx bxl-netlify"></i>
+                <span>Netlify / Vercel</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="about-img">
-        <img src="images/LogoMakr-3mbfiv.png" alt="Foto de juan pablo" />
-      </div>
-    </section>
+      </section>
 
-    <section class="services" id="services">
-      <h2 class="heading">Mis <span>Servicios</span></h2>
-      <p class="heading-description">
-        Ofrezco soluciones modernas en desarrollo web, combinando diseño
-        intuitivo con código limpio y eficiente.
-      </p>
-
-      <div class="services-content">
-        <div class="service-item">
-          <i class="bx bx-code-alt"></i>
-          <h3>Desarrollador Web</h3>
-          <p>
-            Construyo sitios web responsivos y eficientes utilizando las últimas
-            tecnologías y mejores prácticas en el desarrollo frontend.
+      <!-- Services Section -->
+      <section class="services" id="services">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Lo que hago</span>
+          <h2 class="heading">Mis <span>Servicios</span></h2>
+          <p class="heading-description">
+            Ofrezco soluciones modernas en desarrollo web, combinando diseño
+            intuitivo con código limpio, escalable y eficiente.
           </p>
-          <a href="" class="btn-now"
-            >Contacta ahora <i class="bx bx-right-arrow-alt"></i
-          ></a>
         </div>
 
-        <div class="service-item">
-          <i class="bx bx-data"></i>
-          <h3>Gestión de Bases de Datos</h3>
-          <p>
-            Diseño, configuro y mantengo bases de datos eficientes con MySQL,
-            asegurando integridad, seguridad y rendimiento en tus aplicaciones
-            web.
-          </p>
-          <a href="" class="btn-now"
-            >Consulta técnica <i class="bx bx-right-arrow-alt"></i
-          ></a>
-        </div>
-
-        <div class="service-item">
-          <i class="bx bx-bar-chart-alt-2"></i>
-          <h3>Optimización de Rendimiento</h3>
-          <p>
-            Analizo y ajusto tu entorno de desarrollo para reducir el uso de
-            recursos, mejorar la velocidad de carga y aumentar la productividad
-            general.
-          </p>
-          <a href="" class="btn-now"
-            >Optimiza tu sistema <i class="bx bx-right-arrow-alt"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-    <section class="portafolio" id="portafolio">
-      <h2 class="heading">Mi <span>Portafolio</span></h2>
-      <p class="heading-description">
-        Aquí encontrarás algunos de los proyectos que he desarrollado durante mi
-        formación como desarrollador web. Cada uno refleja lo que estoy
-        aprendiendo y cómo aplico tecnologías modernas en soluciones reales.
-      </p>
-      <div class="portafolio-content">
-        <div class="portafolio-item">
-          <div class="portafolio-header">
-            <h4>Carta Menu</h4>
-            <a
-              href="https://github.com/Juanpablo19a/Carta-Menu.git"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://carta-menu-kohl.vercel.app/" target="_blank">
-              <i class="bx bxl-netlify"></i>
-            </a>
-          </div>
-          <p>
-            Aplicación web desarrollada con React y Vite que muestra una carta
-            de menú dinámica, organizada por categorías. Permite filtrar los
-            productos de forma interactiva, con componentes reutilizables y
-            manejo de datos desde archivos locales. Tecnologías: React, Vite,
-            JavaScript, HTML5, CSS3
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> React, JavaScript, HTML5, CSS3, Vite
-          </p>
-          <img
-            src="images/menu.png"
-            alt="Imagen del buscador de GIFs"
-          />
-        </div>
-
-        
-
-        <div class="portafolio-item">
-          <div class="portafolio-header">
-            <h4>Rick and Morty App</h4>
-            <a
-              href="https://github.com/Juanpablo19a/rick-morty-react"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://ricky-y-morty.vercel.app/" target="_blank">
-              <i class="bx bxl-netlify"></i>
-            </a>
-          </div>
-          <p>
-            Aplicación web desarrollada con React utilizando Create React App
-            que consume una API pública para mostrar información de personajes
-            de Rick and Morty, aplicando renderizado dinámico y buenas prácticas
-            de construcción.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> React, JavaScript, Create React App,
-            API REST, HTML5, CSS3, npm
-          </p>
-          <img src="/images/ricky.png" alt="Imagen de la app Rick and Morty" />
-        </div>
-
-        <div class="portafolio-item">
-          <div class="portafolio-header">
-            <h4>Todo List App</h4>
-            <a
-              href="https://github.com/Juanpablo19a/App-lista.git"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://app-lista-vert.vercel.app/" target="_blank">
-              <i class="bx bxl-netlify"></i>
-            </a>
-          </div>
-          <p>
-            Aplicación web de gestión de tareas desarrollada con React y Vite
-            que permite crear, editar, completar y eliminar tareas. Incluye
-            filtrado de tareas, confirmaciones visuales con SweetAlert2 y
-            persistencia automática de datos.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> React, Vite, JavaScript, SweetAlert2,
-            HTML5, CSS3, LocalStorage
-          </p>
-          <img
-            src="/images/todolist.png"
-            alt="Imagen de la aplicación Todo List"
-          />
-        </div>
-                     <div class="portafolio-item">
-  <div class="portafolio-header">
-    <h4>Sistema de Reservas</h4>
-    <a href="https://github.com/Juanpablo19a/reservasion-sistema.git" target="_blank">
-      <i class="bx bxl-github"></i>
-    </a>
-    <a href="https://sistema-reservasion-react.netlify.app/" target="_blank">
-      <i class="bx bxl-netlify"></i>
-    </a>
-  </div>
-  <p>
-    Sistema web de reservas que permite crear y cancelar reservas de forma dinámica,
-    con persistencia de datos mediante LocalStorage, sin necesidad de backend.
-  </p>
-  <p><strong>Tecnologías:</strong> JavaScript, HTML5, CSS3, LocalStorage</p>
-  <img src="/images/sistema.png" alt="Imagen del sistema de reservas">
-</div>
-
-
-<div class="portafolio-item">
-          <div class="portafolio-header">
-            <h4>Buscador de GIFs</h4>
-            <a
-              href="https://github.com/Juanpablo19a/App-Buscar-Gifs-tp"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://app-buscar-gifs-tp.vercel.app/" target="_blank">
-              <i class="bx bxl-netlify"></i>
-            </a>
-          </div>
-          <p>
-            Aplicación web desarrollada con React y TypeScript que consume la
-            API de Giphy para buscar y mostrar GIFs en tiempo real. Incluye
-            historial de búsquedas persistente en LocalStorage y una interfaz
-            responsiva.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> React, TypeScript, API de Giphy,
-            HTML5, CSS3, LocalStorage
-          </p>
-          <img
-            src="images/buscador.png"
-            alt="Imagen del buscador de GIFs"
-          />
-        </div>
-
-        <div class="portafolio-item">
-          <div class="portafolio-header">
-            <h4>Marvel SPA</h4>
-            <a href="https://github.com/Juanpablo19a/heroes-spa-supabase" target="_blank">
-              <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://marvel-ten-smoky.vercel.app" target="_blank">
-              <i class="bx bxl-netlify"></i>
-            </a>
-          </div>
-          <p>
-            Aplicación Single Page Application (SPA) para mostrar información de héroes de Marvel. Incluye autenticación de usuarios y gestión de base de datos utilizando Supabase. Rutas protegidas y navegación dinámica.<br><br>
-            <strong>Credenciales de prueba:</strong> pablo@gmail.com / 123456
-          </p>
-          <p><strong>Tecnologías:</strong> React, React Router, Supabase, JavaScript, CSS3</p>
-          <img src="images/marvelheroes-1652464940086.png" alt="Imagen de Marvel SPA">
-        </div>
-
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <h2 class="heading">Contacta <span>Me</span></h2>
-      <p class="heading-description">
-        Si deseas ponerte en contacto para consultas, colaboraciones o
-        propuestas profesionales, estaré encantado de escucharte. Estoy
-        comprometido con el desarrollo continuo y abierto a nuevas oportunidades
-        que impulsen la innovación y el aprendizaje.
-      </p>
-      <div class="contact-content">
-        <form
-          action="https://formspree.io/f/xjgbvgzv"
-          method="POST"
-          class="contact-form"
-          id="contact-form"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nuevo mensaje desde tu Portafolio"
-          />
-
-          <div class="input-group">
-            <div class="input-box">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre Completo"
-                required
-              />
-              <i class="bx bx-user"></i>
+        <div class="services-content">
+          <div class="service-item reveal">
+            <div class="service-top">
+              <div class="service-icon">
+                <i class="bx bx-code-alt"></i>
+              </div>
+              <span class="service-number">01</span>
             </div>
-            <div class="input-box">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Correo Electrónico"
-                required
-              />
-              <i class="bx bx-envelope"></i>
-            </div>
+            <h3>Desarrollo Web Frontend</h3>
+            <p>
+              Construyo sitios y aplicaciones web responsivas, interactivas y
+              eficientes utilizando las últimas tecnologías y mejores prácticas en
+              arquitectura frontend.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Single Page Applications (React / Angular)</li>
+              <li><i class="bx bx-check"></i> Diseño 100% Responsivo y Accesible</li>
+              <li><i class="bx bx-check"></i> Integración con APIs REST y Supabase</li>
+            </ul>
+            <a href="#contact" class="btn-now">
+              <span>Contacta ahora</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
           </div>
-          <div class="input-group">
-            <div class="input-box">
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="Teléfono (Opcional)"
-              />
-              <i class="bx bx-phone"></i>
+
+          <div class="service-item reveal">
+            <div class="service-top">
+              <div class="service-icon">
+                <i class="bx bx-data"></i>
+              </div>
+              <span class="service-number">02</span>
             </div>
-            <div class="input-box">
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Asunto"
-                required
-              />
-              <i class="bx bx-message-square-detail"></i>
+            <h3>Gestión de Bases de Datos</h3>
+            <p>
+              Diseño, configuro y mantengo bases de datos relacionales y NoSQL
+              con MySQL, MongoDB y Supabase, asegurando integridad, seguridad y
+              velocidad.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Modelado de datos relacional (MySQL)</li>
+              <li><i class="bx bx-check"></i> Autenticación y persistencia en la nube</li>
+              <li><i class="bx bx-check"></i> Consultas optimizadas y seguras</li>
+            </ul>
+            <a href="#contact" class="btn-now">
+              <span>Consulta técnica</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-top">
+              <div class="service-icon">
+                <i class="bx bx-bar-chart-alt-2"></i>
+              </div>
+              <span class="service-number">03</span>
             </div>
+            <h3>Optimización de Rendimiento</h3>
+            <p>
+              Analizo y mejoro tus aplicaciones web para reducir tiempos de carga,
+              optimizar recursos y ofrecer una experiencia de usuario fluida en
+              cualquier dispositivo.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Optimización de carga y activos web</li>
+              <li><i class="bx bx-check"></i> Refactorización con componentes limpios</li>
+              <li><i class="bx bx-check"></i> Mejora de métricas Core Web Vitals</li>
+            </ul>
+            <a href="#contact" class="btn-now">
+              <span>Optimiza tu sistema</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
           </div>
-          <div class="input-box-full">
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="8"
-              placeholder="Tu Mensaje"
-              required
-            ></textarea>
-            <i class="bx bx-message-dots"></i>
-          </div>
-          <button type="submit" class="btn-submit">
-            Enviar Mensaje
-            <i class="bx bx-send"></i>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portafolio" id="portafolio">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Proyectos Destacados</span>
+          <h2 class="heading">Mi <span>Portafolio</span></h2>
+          <p class="heading-description">
+            Explora los proyectos que he desarrollado aplicando tecnologías
+            modernas, consumo de APIs, autenticación y persistencia de datos.
+          </p>
+        </div>
+
+        <!-- Filtros de portafolio -->
+        <div class="portfolio-filters reveal" role="tablist" aria-label="Filtrar proyectos">
+          <button class="filter-btn active" data-filter="all" type="button">
+            Todos (6)
           </button>
-        </form>
-      </div>
-    </section>
+          <button class="filter-btn" data-filter="react" type="button">
+            React
+          </button>
+          <button class="filter-btn" data-filter="fullstack" type="button">
+            TypeScript &amp; Cloud
+          </button>
+          <button class="filter-btn" data-filter="javascript" type="button">
+            JavaScript &amp; Storage
+          </button>
+        </div>
 
+        <div class="portafolio-content">
+          <!-- Proyecto 1: Marvel SPA -->
+          <article class="portafolio-item reveal" data-category="react fullstack">
+            <div class="portfolio-thumb">
+              <img
+                src="images/marvelheroes-1652464940086.png"
+                alt="Vista previa de Marvel SPA"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://marvel-ten-smoky.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/heroes-spa-supabase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+              <span class="project-badge">Destacado</span>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Marvel SPA</h4>
+              </div>
+              <p class="portfolio-desc">
+                Single Page Application (SPA) de héroes de Marvel con
+                autenticación de usuarios, gestión de base de datos en Supabase,
+                rutas protegidas y navegación dinámica.
+              </p>
+
+              <div class="demo-credentials">
+                <div class="cred-title">
+                  <i class="bx bx-key"></i>
+                  <span>Acceso Demo:</span>
+                </div>
+                <code>pablo@gmail.com</code>
+                <span class="cred-sep">/</span>
+                <code>123456</code>
+              </div>
+
+              <div class="tech-tags">
+                <span>React</span>
+                <span>React Router</span>
+                <span>Supabase</span>
+                <span>JavaScript</span>
+                <span>CSS3</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://marvel-ten-smoky.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/heroes-spa-supabase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Buscador de GIFs -->
+          <article class="portafolio-item reveal" data-category="react fullstack">
+            <div class="portfolio-thumb">
+              <img
+                src="images/buscador.png"
+                alt="Vista previa del Buscador de GIFs"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://app-buscar-gifs-tp.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/App-Buscar-Gifs-tp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+              <span class="project-badge">TypeScript</span>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Buscador de GIFs</h4>
+              </div>
+              <p class="portfolio-desc">
+                Aplicación desarrollada con React y TypeScript que consume la API
+                de Giphy para buscar y mostrar GIFs en tiempo real, con historial
+                persistente en LocalStorage.
+              </p>
+
+              <div class="tech-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>API Giphy</span>
+                <span>LocalStorage</span>
+                <span>CSS3</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://app-buscar-gifs-tp.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/App-Buscar-Gifs-tp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Carta Menu -->
+          <article class="portafolio-item reveal" data-category="react">
+            <div class="portfolio-thumb">
+              <img
+                src="images/menu.png"
+                alt="Vista previa de Carta Menu"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://carta-menu-kohl.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/Carta-Menu.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Carta Menú Interactiva</h4>
+              </div>
+              <p class="portfolio-desc">
+                Aplicación web desarrollada con React y Vite que muestra una carta
+                gastronómica dinámica organizada por categorías, con filtrado
+                instantáneo y componentes reutilizables.
+              </p>
+
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Vite</span>
+                <span>JavaScript</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://carta-menu-kohl.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/Carta-Menu.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Todo List App -->
+          <article class="portafolio-item reveal" data-category="react javascript">
+            <div class="portfolio-thumb">
+              <img
+                src="images/todolist.png"
+                alt="Vista previa de la aplicación Todo List"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://app-lista-vert.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/App-lista.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Todo List App</h4>
+              </div>
+              <p class="portfolio-desc">
+                Gestor de tareas interactivo con React y Vite que permite crear,
+                editar, completar y filtrar actividades, integrando alertas con
+                SweetAlert2 y persistencia en LocalStorage.
+              </p>
+
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Vite</span>
+                <span>SweetAlert2</span>
+                <span>LocalStorage</span>
+                <span>CSS3</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://app-lista-vert.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/App-lista.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: Rick and Morty App -->
+          <article class="portafolio-item reveal" data-category="react">
+            <div class="portfolio-thumb">
+              <img
+                src="images/ricky.png"
+                alt="Vista previa de la app Rick and Morty"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://ricky-y-morty.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/rick-morty-react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Rick and Morty Explorer</h4>
+              </div>
+              <p class="portfolio-desc">
+                Aplicación web desarrollada con React que consume una API REST
+                pública para explorar personajes de Rick and Morty con renderizado
+                dinámico y arquitectura modular.
+              </p>
+
+              <div class="tech-tags">
+                <span>React</span>
+                <span>API REST</span>
+                <span>JavaScript</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://ricky-y-morty.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/rick-morty-react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 6: Sistema de Reservas -->
+          <article class="portafolio-item reveal" data-category="javascript">
+            <div class="portfolio-thumb">
+              <img
+                src="images/sistema.png"
+                alt="Vista previa del Sistema de Reservas"
+                loading="lazy"
+              />
+              <div class="portfolio-overlay">
+                <a
+                  href="https://sistema-reservasion-react.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver Demo en vivo"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/reservasion-sistema.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="overlay-btn"
+                  title="Ver código en GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-body">
+              <div class="portafolio-header">
+                <h4>Sistema de Reservas</h4>
+              </div>
+              <p class="portfolio-desc">
+                Sistema web interactivo que permite registrar, gestionar y
+                cancelar reservas de mesas en línea de forma dinámica con
+                persistencia de datos en LocalStorage.
+              </p>
+
+              <div class="tech-tags">
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Netlify</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <a
+                  href="https://sistema-reservasion-react.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="bx bx-globe"></i>
+                  <span>Demo en vivo</span>
+                </a>
+                <a
+                  href="https://github.com/Juanpablo19a/reservasion-sistema.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn project-btn-ghost"
+                >
+                  <i class="bx bxl-github"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Hablemos</span>
+          <h2 class="heading">Contácta<span>me</span></h2>
+          <p class="heading-description">
+            Si deseas ponerte en contacto para consultas, colaboraciones o
+            propuestas profesionales, estaré encantado de escucharte.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Panel de información directa -->
+          <div class="contact-info-panel reveal">
+            <h3>Información de contacto</h3>
+            <p>
+              Estoy abierto a oportunidades laborales, prácticas preprofesionales
+              y proyectos freelance. ¡Escríbeme por cualquiera de estos medios!
+            </p>
+
+            <div class="contact-cards">
+              <a
+                href="https://wa.me/+51970630215"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="info-card"
+              >
+                <div class="info-card-icon whatsapp-icon">
+                  <i class="bx bxl-whatsapp"></i>
+                </div>
+                <div class="info-card-text">
+                  <span>WhatsApp / Teléfono</span>
+                  <strong>+51 970 630 215</strong>
+                </div>
+                <i class="bx bx-link-external info-card-arrow"></i>
+              </a>
+
+              <div class="info-card" id="copy-email-card" role="button" tabindex="0" title="Click para copiar correo">
+                <div class="info-card-icon">
+                  <i class="bx bx-envelope"></i>
+                </div>
+                <div class="info-card-text">
+                  <span>Correo Electrónico</span>
+                  <strong id="email-text">juanpablo19ac@hotmail.com</strong>
+                </div>
+                <i class="bx bx-copy info-card-arrow" id="copy-icon"></i>
+              </div>
+
+              <div class="info-card">
+                <div class="info-card-icon">
+                  <i class="bx bx-map"></i>
+                </div>
+                <div class="info-card-text">
+                  <span>Ubicación</span>
+                  <strong>Lima, Perú</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-box">
+              <span>Sígueme en redes:</span>
+              <div class="contact-socials">
+                <a
+                  href="https://github.com/Juanpablo19a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/juanpabloac19/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/juan.pablo.acosta.205303/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="bx bxl-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Contacto -->
+          <div class="contact-content reveal">
+            <form
+              action="https://formspree.io/f/xjgbvgzv"
+              method="POST"
+              class="contact-form"
+              id="contact-form"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje desde tu Portafolio"
+              />
+
+              <div class="input-group">
+                <div class="input-box">
+                  <label for="name">Nombre Completo</label>
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Ej. Carlos Mendoza"
+                      required
+                    />
+                    <i class="bx bx-user"></i>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <label for="email">Correo Electrónico</label>
+                  <div class="input-field">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="ejemplo@correo.com"
+                      required
+                    />
+                    <i class="bx bx-envelope"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <div class="input-box">
+                  <label for="phone">Teléfono (Opcional)</label>
+                  <div class="input-field">
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="+51 999 999 999"
+                    />
+                    <i class="bx bx-phone"></i>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <label for="subject">Asunto</label>
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      placeholder="Propuesta de proyecto / Contacto"
+                      required
+                    />
+                    <i class="bx bx-message-square-detail"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-box-full">
+                <label for="message">Tu Mensaje</label>
+                <div class="input-field">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="6"
+                    placeholder="Cuéntame sobre tu proyecto, vacante o consulta..."
+                    required
+                  ></textarea>
+                  <i class="bx bx-message-dots"></i>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>Enviar Mensaje</span>
+                <i class="bx bx-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>Juan Pablo</h3>
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-bracket">&lt;</span>Juan<span>Pablo</span><span class="logo-bracket">/&gt;</span>
+          </a>
           <p>
             Desarrollador Web Frontend apasionado por crear experiencias
-            digitales únicas y funcionales.
+            digitales modernas, rápidas y centradas en el usuario.
           </p>
           <div class="footer-social">
             <a
-              href="https://www.facebook.com/juan.pablo.acosta.205303/"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <i class="bx bxl-facebook"></i>
-            </a>
-            <a
               href="https://github.com/Juanpablo19a"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
             >
               <i class="bx bxl-github"></i>
             </a>
-
             <a
-              href="https://www.linkedin.com/in/juan-pablo-a-4586b836b/"
+              href="https://www.linkedin.com/in/juanpabloac19/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               <i class="bx bxl-linkedin"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/juan.pablo.acosta.205303/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="bx bxl-facebook"></i>
             </a>
           </div>
         </div>
 
         <div class="footer-section">
-          <h3>Enlaces Rápidos</h3>
+          <h3>Navegación</h3>
           <ul class="footer-links">
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#about">Acerca de mí</a></li>
             <li><a href="#services">Servicios</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
             <li><a href="#contact">Contacto</a></li>
@@ -478,7 +1121,7 @@
         </div>
 
         <div class="footer-section">
-          <h3>Contacto</h3>
+          <h3>Contacto Directo</h3>
           <div class="footer-contact">
             <div class="contact-item">
               <i class="bx bx-phone"></i>
@@ -497,9 +1140,18 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Juan Pablo. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Juan Pablo. Todos los derechos reservados.</p>
+        <a href="#home" class="scroll-top" aria-label="Volver arriba">
+          <i class="bx bx-up-arrow-alt"></i>
+        </a>
       </div>
     </footer>
+
+    <!-- Toast de notificación -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <i class="bx bx-check-circle"></i>
+      <span id="toast-message">Copiado al portapapeles</span>
+    </div>
 
     <script src="./js/script.js"></script>
   </body>
